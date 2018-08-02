@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              style="@style/base_match_width_height_with_orientation_vertical"
+              android:background="@drawable/shape_common_no_border_bg_five_size_corners_white"
+              android:gravity="center_horizontal"
+    >
+    <TextView
+        android:id="@+id/tv_contacts_title"
+        style="@style/base_widthMatch_heightWrapContent"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/common_padding_tenSize"
+        android:background="@drawable/shape_common_no_border_bg_five_size_corners_tlr"
+        android:textColor="@color/common_white"
+        android:textSize="@dimen/common_text_twentySize"
+        android:text="温馨提示"
+        />
+    <TextView
+        android:id="@+id/tv_message_content"
+        style="@style/base_widthMatch_heightWrapContent"
+        android:gravity="center_vertical"
+        android:minLines="3"
+        android:padding="@dimen/common_padding_tenSize"
+        android:textColor="@color/commmon_tv_text3"
+        android:textSize="@dimen/common_text_twentySize"
+        />
+    <View
+        android:id="@+id/view_line"
+        style="@style/view_line_height"
+     />
+
+    <LinearLayout
+        android:id="@+id/liner_bottom"
+        style="@style/base_widthMatch_heightWrapContent"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/tv_cancle"
+            style="@style/dialog_textview_left_style"
+            android:textColor="@color/common_text"
+            android:textSize="@dimen/common_text_sixteenSize"
+            android:text="@string/cancel"/>
+
+        <View
+            style="@style/view_line_height"
+            android:layout_width="1dp"
+            android:layout_height="45dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_certain"
+            style="@style/dialog_textview_right_style"
+            android:textColor="@color/common_text"
+            android:textSize="@dimen/common_text_sixteenSize"
+            android:text="@string/certain"/>
+    </LinearLayout>
+
+</LinearLayout>

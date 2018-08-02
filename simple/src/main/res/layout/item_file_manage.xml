@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                style="@style/base_widthMatch_heightWrapContent"
+                android:background="@color/common_white"
+                android:paddingLeft="@dimen/common_margin_twentySize"
+                android:paddingRight="@dimen/common_margin_twentySize"
+                android:paddingTop="@dimen/common_padding_tenSize"
+                android:paddingBottom="@dimen/common_padding_tenSize"
+                android:id="@+id/item_file_manage_root"
+    >
+
+    <ImageView
+        android:id="@+id/img_folder"
+        style="@style/base_alignParent_left"
+        android:layout_marginRight="@dimen/common_margin_fiveSize"
+        android:src="@mipmap/folder_style_yellow"/>
+
+    <TextView
+        android:id="@+id/tv_item_folderename"
+        style="@style/base_widthMatch_heightWrapContent"
+        android:layout_alignTop="@+id/img_folder"
+        android:layout_toRightOf="@+id/img_folder"
+        android:textSize="@dimen/common_text_eighteenthSize"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/commmon_tv_text3"
+        />
+
+    <TextView
+        android:id="@+id/tv_item_folderdetail"
+        style="@style/base_widthMatch_heightWrapContent"
+        android:layout_alignBottom="@+id/img_folder"
+        android:layout_toRightOf="@+id/img_folder"
+        android:textColor="@color/common_e0"
+        android:textSize="@dimen/common_text_sixteenSize"
+        />
+</RelativeLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="grid_expected_size">120dp</dimen>
+    <!--common with height-->
+    <dimen name="common_width_hundred">100dp</dimen>
+    <dimen name="common_height_hundred">100dp</dimen>
+    <dimen name="common_fiftySize">50dp</dimen>
+    <dimen name="common_fortySize">40dp</dimen>
+    <dimen name="common_thirtySize">30dp</dimen>
+
+    <!--common padding-->
+    <dimen name="common_padding_fiftySize">50dp</dimen>
+    <dimen name="common_padding_thirtySize">30dp</dimen>
+    <dimen name="common_padding_twentySize">20dp</dimen>
+    <dimen name="common_padding_tenSize">10dp</dimen>
+    <dimen name="common_padding_fiveSize">5dp</dimen>
+    <dimen name="common_padding_fifteenSize">15dp</dimen>
+
+    <!--common margin-->
+    <dimen name="common_margin_fortySize">40dp</dimen>
+    <dimen name="common_margin_thirtySize">30dp</dimen>
+    <dimen name="common_margin_twentySize">20dp</dimen>
+    <dimen name="common_margin_fifteenSize">15dp</dimen>
+    <dimen name="common_margin_tenSize">10dp</dimen>
+    <dimen name="common_margin_fiveSize">5dp</dimen>
+
+    <!--common textSize-->
+    <dimen name="common_text_fiftySize">50sp</dimen>
+    <dimen name="common_text_thirtySize">30dp</dimen>
+    <dimen name="common_text_twentySize">20sp</dimen>
+    <dimen name="common_text_eighteenthSize">18sp</dimen>
+    <dimen name="common_text_sixteenSize">16sp</dimen>
+    <dimen name="common_text_fourteenSize">14sp</dimen>
+    <dimen name="common_text_twelveSize">12sp</dimen>
+
+    <!--common shape corners_radius -->
+    <dimen name="common_corners_radius_twentySize">20dp</dimen>
+    <dimen name="common_corners_radius_tenSize">10dp</dimen>
+    <dimen name="common_corners_radius_fiveSize">5dp</dimen>
+
+    <!--common shape stroke_width -->
+    <dimen name="common_stroke_width_oneSize">0.5dp</dimen>
+
+    <!--common shape stroke_height -->
+    <dimen name="common_stroke_height_oneSize">.05dp</dimen>
+
+    <!--common view_line width -->
+    <dimen name="common_view_line_width">0.5dp</dimen>
+
+    <!--common view_line height -->
+    <dimen name="common_view_line_height">0.5dp</dimen>
+</resources>

@@ -1,0 +1,76 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:screenOrientation">portrait</item>
+    </style>
+
+    <!-- Base with height match -->
+    <style name="base_match_width_height">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <!-- Base with height wrap content -->
+    <style name="base_wrap_content_width_height">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <!-- Base with height match with orientation -->
+    <style name="base_match_width_height_with_orientation_vertical" parent="base_match_width_height">
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <!-- Base with height match wrap content -->
+    <style name="base_widthMatch_heightWrapContent">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <!-- view_line height -->
+    <style name="view_line_height">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/common_view_line_height</item>
+        <item name="android:background">@color/common_e0</item>
+    </style>
+
+    <!--Dialog TextView-->
+    <style name="dialog_textview_style">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/common_white</item>
+        <item name="android:textSize">@dimen/common_text_sixteenSize</item>
+    </style>
+
+    <!--dialog_textview_left_style-->
+    <style name="dialog_textview_left_style" parent="dialog_textview_style">
+        <item name="android:background">@drawable/selector_dialog_bg_bottom_left</item>
+    </style>
+    <!--dialog_textview_right_style-->
+    <style name="dialog_textview_right_style" parent="dialog_textview_style">
+        <item name="android:background">@drawable/selector_dialog_bg_bottom_right</item>
+    </style>
+
+    <style name="common_textview_style" parent="base_wrap_content_width_height">
+        <item name="android:layout_marginTop">@dimen/common_margin_twentySize</item>
+        <item name="android:textSize">@dimen/common_text_twentySize</item>
+    </style>
+
+    <!--Base alignParent Left with height wrap content-->
+    <style name="base_alignParent_left" parent="base_wrap_content_width_height">
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_alignParentLeft">true</item>
+    </style>
+    <!--Base alignParent Right with height wrap content-->
+    <style name="base_alignParent_right" parent="base_wrap_content_width_height">
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_alignParentRight">true</item>
+    </style>
+</resources>

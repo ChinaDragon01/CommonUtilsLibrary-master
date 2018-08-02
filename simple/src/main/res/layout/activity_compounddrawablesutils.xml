@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              style="@style/base_match_width_height_with_orientation_vertical"
+              android:gravity="center_horizontal"
+    >
+
+    <TextView
+        android:id="@+id/tv_compoundDrawables_top"
+        style="@style/base_wrap_content_width_height"
+        android:layout_marginTop="@dimen/common_text_twentySize"
+        android:text="CompoundDrawablesUtils Top"
+        android:textSize="@dimen/common_text_twentySize"
+        />
+
+    <TextView
+        android:id="@+id/tv_compoundDrawables_bottom"
+        style="@style/base_wrap_content_width_height"
+        android:layout_marginTop="@dimen/common_text_twentySize"
+        android:text="CompoundDrawablesUtils Bottom"
+        android:textSize="@dimen/common_text_twentySize"
+        />
+
+    <TextView
+        android:id="@+id/tv_compoundDrawables_left"
+        style="@style/base_wrap_content_width_height"
+        android:layout_marginTop="@dimen/common_text_twentySize"
+        android:text="CompoundDrawablesUtils Left"
+        android:textSize="@dimen/common_text_twentySize"
+        />
+
+    <TextView
+        android:id="@+id/tv_compoundDrawables_right"
+        style="@style/base_wrap_content_width_height"
+        android:layout_marginTop="@dimen/common_text_twentySize"
+        android:text="CompoundDrawablesUtils Right"
+        android:textSize="@dimen/common_text_twentySize"
+        />
+</LinearLayout>

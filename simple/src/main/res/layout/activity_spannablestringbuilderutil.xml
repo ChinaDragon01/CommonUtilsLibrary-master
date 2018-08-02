@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              style="@style/base_match_width_height_with_orientation_vertical"
+              android:paddingLeft="@dimen/common_padding_tenSize"
+    >
+    <TextView
+        android:id="@+id/tv_textForegroundColor"
+        style="@style/common_textview_style"
+        android:text="修改部分字体颜色"
+        />
+
+    <TextView
+        android:id="@+id/tv_textBackgroundColor"
+        style="@style/common_textview_style"
+        android:text="修改部分字体颜色有背景色"
+        />
+
+    <TextView
+        android:id="@+id/tv_textForegroundColorAndSize"
+        style="@style/common_textview_style"
+        android:text="修改部分字体颜色同时修改字体大小"
+        />
+</LinearLayout>

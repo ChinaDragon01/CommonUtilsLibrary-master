@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              style="@style/base_match_width_height_with_orientation_vertical"
+              android:padding="@dimen/common_padding_tenSize"
+    >
+
+    <Spinner
+        android:id="@+id/spinner_encryption_mode"
+        style="@style/common_textview_style"
+        android:layout_marginBottom="20dp"
+        />
+
+    <EditText
+        android:id="@+id/et"
+        style="@style/base_widthMatch_heightWrapContent"
+        android:hint="Encryption key"
+        android:lines="1"
+        />
+
+
+    <TextView
+        android:id="@+id/tv_ciphertext"
+        style="@style/base_widthMatch_heightWrapContent"
+        android:layout_marginTop="@dimen/common_margin_tenSize"
+        android:background="@drawable/shape_common_with_border_with_five_size_corners"
+        android:maxLines="5"
+        android:textColor="@color/commmon_tv_text3"
+        android:textSize="@dimen/common_text_sixteenSize"
+        />
+
+    <TextView
+        android:id="@+id/tv_laws"
+        style="@style/base_widthMatch_heightWrapContent"
+        android:layout_marginTop="@dimen/common_margin_tenSize"
+        android:background="@drawable/shape_common_with_border_with_five_size_corners"
+        android:textColor="@color/commmon_tv_text3"
+        android:textSize="@dimen/common_text_sixteenSize"
+        />
+
+</LinearLayout>

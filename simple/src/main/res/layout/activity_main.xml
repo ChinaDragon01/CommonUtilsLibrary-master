@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/base_match_width_height"
+    tools:context="com.chinadragon.commonutilslibrary.simple.ui.MainActivity">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_main"
+        style="@style/base_match_width_height"
+        android:background="@color/common_f2"
+        />
+
+</android.support.constraint.ConstraintLayout>

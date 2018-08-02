@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             style="@style/base_match_width_height_with_orientation_vertical"
+              android:gravity="center_horizontal"
+    >
+
+    <TextView
+        android:id="@+id/tv_currettime"
+        style="@style/common_textview_style"
+        android:text="获取当前时间"
+        />
+
+    <TextView
+        android:id="@+id/tv_date_util"
+        style="@style/common_textview_style"
+        />
+
+    <TextView
+        android:id="@+id/tv_no_multiclick"
+        style="@style/common_textview_style"
+        android:text="两秒内不能重复点击"
+        />
+
+    <TextView
+        android:id="@+id/tv_totalDuration"
+        style="@style/common_textview_style"
+        android:text="请点击刷新停留在此页面的时长"
+        />
+    <TextView
+        android:id="@+id/tv_recordtime"
+        style="@style/common_textview_style"
+        android:text="开始计时"
+        />
+
+    <Chronometer
+        android:id="@+id/chronometer"
+        style="@style/common_textview_style"
+        android:format="00:00:00"
+        />
+
+    <TextView
+        android:id="@+id/tv_recordtime2"
+        style="@style/common_textview_style"
+        android:text="00:00:00"
+        />
+    <TextView
+        android:id="@+id/tv_getverfiycode"
+        style="@style/common_textview_style"
+        android:text="获取验证码倒计时"
+        />
+    <TextView
+        android:id="@+id/tv_weakHandlerUtil"
+        style="@style/common_textview_style"
+        android:text="获取WeakHandlerUtil的使用效果"
+        />
+
+</LinearLayout>

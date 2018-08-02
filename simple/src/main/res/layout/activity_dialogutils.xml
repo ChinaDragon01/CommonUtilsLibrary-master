@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              style="@style/base_match_width_height_with_orientation_vertical"
+              android:gravity="center_horizontal"
+    >
+
+    <TextView
+        android:id="@+id/tv_singleChoiceDialog"
+        style="@style/common_textview_style"
+        android:text="singleChoiceDialog"
+        />
+
+    <TextView
+        android:id="@+id/tv_multiChoiceDialog"
+        style="@style/common_textview_style"
+        android:text="multiChoiceDialog"
+        />
+
+</LinearLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#03a9f4</color>
+    <color name="colorPrimaryDark">#039be5</color>
+    <color name="colorAccent">#03a9f4</color>
+    <!--common-->
+    <color name="common_white">#fff</color>
+    <color name="common_black">#000</color>
+    <color name="common_transparent_color">#00000000</color>
+    <color name="common_half_transparent_color">#55000000</color>
+    <color name="common_text">#59b4f5</color>
+    <color name="commmon_tv_text3">#333333</color>
+    <color name="commmon_tv_text6">#666666</color>
+    <color name="commmon_tv_text9">#999999</color>
+    <color name="commmon_input_hint9">#999999</color>
+    <color name="common_e0">#e0e0e0</color>
+    <color name="common_ed">#ededed</color>
+    <color name="common_pressed_f2">#f2f2f2</color>
+    <!--view_line 单线条-->
+    <color name="view_line">@color/common_e0</color>
+</resources>

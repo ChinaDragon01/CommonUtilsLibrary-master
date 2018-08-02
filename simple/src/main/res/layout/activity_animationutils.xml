@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             android:background="@color/common_half_transparent_color"
+                                             style="@style/base_match_width_height">
+    <TextView
+        android:id="@+id/tv_animaton1"
+        style="@style/base_wrap_content_width_height"
+        android:textSize="@dimen/common_text_eighteenthSize"
+        android:text="组合动画"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="@dimen/common_margin_tenSize"
+        />
+    <TextView
+        android:id="@+id/tv_alpha_scale"
+        style="@style/base_wrap_content_width_height"
+        android:padding="@dimen/common_padding_tenSize"
+        android:gravity="center"
+        android:background="@color/common_text"
+        android:textColor="@color/common_white"
+        android:textSize="@dimen/common_text_sixteenSize"
+        android:text="组合动画 透明度 和 缩放"
+        app:layout_constraintTop_toBottomOf="@+id/tv_animaton1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="12dp"
+        />
+
+    <ImageView
+        android:id="@+id/imgBtn_topRight"
+        style="@style/base_wrap_content_width_height"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintLeft_toRightOf="@+id/tv_alpha_scale"
+        app:layout_constraintTop_toTopOf="@+id/tv_alpha_scale"
+        android:layout_marginLeft="@dimen/common_margin_tenSize"
+        />
+
+    <TextView
+        android:id="@+id/tv_v"
+        android:layout_width="50dp"
+        android:layout_height="200dp"
+        android:textSize="@dimen/common_text_sixteenSize"
+        android:textColor="@color/common_white"
+        android:gravity="center"
+        android:background="@color/common_text"
+        android:layout_marginRight="@dimen/common_margin_tenSize"
+        android:layout_marginBottom="@dimen/common_margin_tenSize"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/imgBtn"
+        />
+
+    <TextView
+        android:id="@+id/tv_h"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:textSize="@dimen/common_text_sixteenSize"
+        android:textColor="@color/common_white"
+        android:gravity="center"
+        android:text="组合动画 透明度 和 平移"
+        app:layout_constraintRight_toLeftOf="@+id/tv_v"
+        app:layout_constraintTop_toBottomOf="@id/tv_v"
+        android:background="@color/common_text"
+        />
+    <ImageView
+        android:id="@+id/imgBtn"
+        style="@style/base_wrap_content_width_height"
+        android:layout_marginBottom="@dimen/common_margin_twentySize"
+        android:layout_marginRight="@dimen/common_margin_tenSize"
+        android:src="@mipmap/close_expansion"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tv_v_left"
+        android:layout_width="30dp"
+        android:layout_height="200dp"
+        android:textSize="@dimen/common_text_sixteenSize"
+        android:textColor="@color/common_white"
+        android:gravity="center"
+        android:background="@color/common_text"
+        android:layout_marginLeft="@dimen/common_margin_fifteenSize"
+        android:layout_marginBottom="@dimen/common_margin_tenSize"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/imgBtn_left"
+        android:text="平移动画 回弹效果"
+        />
+
+    <ImageView
+        android:id="@+id/imgBtn_left"
+        style="@style/base_wrap_content_width_height"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="parent"
+        android:layout_marginBottom="@dimen/common_margin_twentySize"
+        android:layout_marginLeft="@dimen/common_margin_tenSize"
+        />
+
+</android.support.constraint.ConstraintLayout>

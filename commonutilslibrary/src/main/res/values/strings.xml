@@ -1,0 +1,14 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <string name="app_name">CommonUtilsLibrary</string>
+    <string name="please_input_phoneNumber">请输入手机号</string>
+    <string name="please_input_correct_phoneNumber">请输入正确的手机号</string>
+    <string name="please_input_correct_verify_code">请输入正确的验证码</string>
+    <string name="phoneNumber_verify_code_not_empty">手机号码和验证码不能为空</string>
+    <string name="please_input_verify_code">请输入验证码</string>
+    <string name="please_input_new_password">请输入新密码</string>
+    <string name="not_same_password">两次输入的密码不一致</string>
+    <string name="please_input_new_password_again">请再次输入新密码</string>
+    <string name="re_obtain">重新获取</string>
+    <string name="please_wait">请稍等...</string>
+</resources>
+

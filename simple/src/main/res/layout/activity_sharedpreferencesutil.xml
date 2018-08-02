@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              style="@style/base_match_width_height_with_orientation_vertical"
+              android:paddingLeft="@dimen/common_padding_twentySize"
+    >
+
+    <LinearLayout
+        style="@style/base_widthMatch_heightWrapContent"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:id="@+id/tv_int_num"
+            style="@style/common_textview_style"
+            android:text="101"
+            />
+
+        <TextView
+            android:id="@+id/tv_long_num"
+            style="@style/common_textview_style"
+            android:layout_marginLeft="@dimen/common_margin_twentySize"
+            android:text="2247483647"
+            />
+
+        <TextView
+            android:id="@+id/tv_string_text"
+            style="@style/common_textview_style"
+            android:layout_marginLeft="@dimen/common_margin_twentySize"
+            android:text="使用sp缓存数据"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_show_data"
+        style="@style/common_textview_style"
+        android:paddingTop="@dimen/common_padding_tenSize"
+        android:textColor="@color/common_black"
+        android:textSize="@dimen/common_text_twentySize"
+        android:text="这里将显示获取到的数据"
+        />
+
+    <LinearLayout
+        style="@style/base_widthMatch_heightWrapContent"
+        android:layout_marginTop="@dimen/common_margin_twentySize"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:id="@+id/tv_save_int_num"
+            style="@style/common_textview_style"
+            android:textSize="@dimen/common_text_fourteenSize"
+            android:text="保存int数据"
+            />
+
+        <TextView
+            android:id="@+id/tv_get_int_num"
+            style="@style/common_textview_style"
+            android:layout_marginLeft="@dimen/common_margin_twentySize"
+            android:textSize="@dimen/common_text_fourteenSize"
+            android:text="获取int数据"
+            />
+
+        <TextView
+            android:id="@+id/tv_remove_int_num"
+            style="@style/common_textview_style"
+            android:layout_marginLeft="@dimen/common_margin_twentySize"
+            android:textSize="@dimen/common_text_fourteenSize"
+            android:text="移除int数据"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        style="@style/base_widthMatch_heightWrapContent"
+        android:layout_marginTop="@dimen/common_margin_twentySize"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:id="@+id/tv_save_long_num"
+            style="@style/common_textview_style"
+            android:textSize="@dimen/common_text_fourteenSize"
+            android:text="保存long数据"
+            />
+
+        <TextView
+            android:id="@+id/tv_get_long_num"
+            style="@style/common_textview_style"
+            android:layout_marginLeft="@dimen/common_margin_twentySize"
+            android:textSize="@dimen/common_text_fourteenSize"
+            android:text="获取long数据"
+            />
+
+        <TextView
+            android:id="@+id/tv_remove_long_num"
+            style="@style/common_textview_style"
+            android:layout_marginLeft="@dimen/common_margin_twentySize"
+            android:textSize="@dimen/common_text_fourteenSize"
+            android:text="移除long数据"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/base_widthMatch_heightWrapContent"
+        android:layout_marginTop="@dimen/common_margin_twentySize"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:id="@+id/tv_save_string"
+            style="@style/common_textview_style"
+            android:textSize="@dimen/common_text_fourteenSize"
+            android:text="保存string数据"
+            />
+
+        <TextView
+            android:id="@+id/tv_get_string"
+            style="@style/common_textview_style"
+            android:layout_marginLeft="@dimen/common_margin_twentySize"
+            android:textSize="@dimen/common_text_fourteenSize"
+            android:text="获取string数据"
+            />
+
+        <TextView
+            android:id="@+id/tv_remove_string"
+            style="@style/common_textview_style"
+            android:layout_marginLeft="@dimen/common_margin_twentySize"
+            android:textSize="@dimen/common_text_fourteenSize"
+            android:text="移除string数据"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_clear_cache"
+        style="@style/common_textview_style"
+        android:text="清除缓存数据"
+        />
+
+</LinearLayout>

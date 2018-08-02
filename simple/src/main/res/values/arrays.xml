@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="activity_name">
+        <item>AnimationUtils</item>
+        <item>Encrypt</item>
+        <item>ImageUtils</item>
+        <item>Time</item>
+        <item>Widget</item>
+        <item>CompoundDrawablesUtils</item>
+        <item>DialogUtils</item>
+        <item>FileUtils</item>
+        <item>RegexUtil</item>
+        <item>SharedPreferencesUtil</item>
+        <item>SpannableStringBuilderUtil</item>
+    </string-array>
+    <string-array name="encrypt_mode">
+        <item>Base64Encrypt</item>
+        <item>RSAUtils私钥加密公钥解密</item>
+        <item>RSAUtils公钥加密私钥解密</item>
+        <item>RSAUtils签名</item>
+    </string-array>
+</resources>

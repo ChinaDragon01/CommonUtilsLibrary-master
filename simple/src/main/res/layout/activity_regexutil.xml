@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              style="@style/base_match_width_height_with_orientation_vertical"
+              android:paddingLeft="@dimen/common_padding_tenSize"
+    >
+    <TextView
+        android:id="@+id/tv_regexIsPhonNumber"
+        style="@style/common_textview_style"
+        />
+    <TextView
+        android:id="@+id/tv_checkIdCard"
+        style="@style/common_textview_style"
+        />
+    <TextView
+        android:id="@+id/tv_checkName"
+        style="@style/common_textview_style"
+        />
+    <TextView
+        android:id="@+id/tv_checkNumber"
+        style="@style/common_textview_style"
+        />
+    <TextView
+        android:id="@+id/tv_regexIsCorrectVerifyCode"
+        style="@style/common_textview_style"
+        />
+    <TextView
+        android:id="@+id/tv_regexIsSamePassword"
+        style="@style/common_textview_style"
+        />
+
+</LinearLayout>
