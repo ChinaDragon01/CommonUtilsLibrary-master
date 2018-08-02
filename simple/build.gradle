@@ -37,7 +37,8 @@ dependencies {
     compile 'com.android.support:appcompat-v7:26.+'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
-    compile project(':commonutilslibrary')
+//    compile project(':commonutilslibrary')
+    compile 'com.github.ChinaDragon01:CommonUtilsLibrary-master:1.0'
     compile 'com.jakewharton:butterknife:8.8.1'
     apt 'com.jakewharton:butterknife-compiler:8.8.1'
     compile 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.5@aar'
