@@ -19,9 +19,14 @@
 		}
 	}
 
-### 2. module目录的build.gradle添加引用
+### 2.1 module目录的build.gradle添加依赖（as 3.1.x版本之后的依赖方式）
 	dependencies {
 	        implementation 'com.github.ChinaDragon01:CommonUtilsLibrary-master:1.0'
+	}
+
+### 2.2 module目录的build.gradle添加依赖（as3.1.x版本之前的依赖方式）
+	dependencies {
+	        compile 'com.github.ChinaDragon01:CommonUtilsLibrary-master:1.0'
 	}
 
 ### 3. 添加权限
@@ -33,4 +38,4 @@
 # 声明
 部分代码是参考别人写的，大多数代码是本人亲自敲写的！
 
-## 在使用过程中有遇到bug，欢迎提issuse ! 若你觉得还不错，请点Star, 谢谢！
+## 在使用过程中有遇到bug，欢迎提issuse ! 如果你认为本库实用，请点Star, 谢谢！
