@@ -3,6 +3,7 @@ package com.chinadragon.commonutilslibrary.animation;
 import android.animation.Animator;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
+import android.animation.TimeInterpolator;
 import android.view.View;
 import android.view.animation.BounceInterpolator;
 import android.view.animation.TranslateAnimation;
@@ -130,7 +131,7 @@ public class AnimationUtils {
      */
     public static TranslateAnimation setTranslateAnimation(View view, float fromXDelta, float toXDelta, float fromYDelta, float toYDelta, long durationMillis) {
         TranslateAnimation translateAnimation = new TranslateAnimation(fromXDelta, toXDelta, fromYDelta, toYDelta);
-        translateAnimation.setInterpolator(new BounceInterpolator());
+        translateAnimation.setInterpolator(new BounceInterpolator());// 回弹效果
         translateAnimation.setDuration(durationMillis);
         view.setAnimation(translateAnimation);
         view.startAnimation(translateAnimation);
@@ -142,13 +143,16 @@ public class AnimationUtils {
      * @param view
      * @param fromYDelta
      * @param toYDelta
+     * @param timeInterpolator
      * @param durationMillis
      */
-    public static void tranY(View view, float fromYDelta, float toYDelta,long durationMillis) {
+    public static void objectAnimatorTranY(View view, float fromYDelta, float toYDelta, TimeInterpolator timeInterpolator, long durationMillis) {
         Animator tranY = ObjectAnimator.ofFloat(view, "translationY", fromYDelta, toYDelta);
         //设置动画执行的持续时间
         tranY.setDuration(durationMillis);
-//        tranX.setInterpolator(new BounceInterpolator());// 回弹效果
+        if (null != timeInterpolator){
+            tranY.setInterpolator(timeInterpolator);// 回弹效果
+        }
         tranY.start();
     }
 
@@ -159,11 +163,13 @@ public class AnimationUtils {
      * @param toYDelta
      * @param durationMillis
      */
-    public static void tranX(View view, float fromYDelta, float toYDelta,long durationMillis) {
+    public static void objectAnimatorTranX(View view, float fromYDelta, float toYDelta, TimeInterpolator timeInterpolator, long durationMillis) {
         Animator tranX = ObjectAnimator.ofFloat(view, "translationX", fromYDelta, toYDelta);
         //设置动画执行的持续时间
         tranX.setDuration(durationMillis);
-//        tranX.setInterpolator(new BounceInterpolator());// 回弹效果
+        if (null != timeInterpolator){
+            tranX.setInterpolator(timeInterpolator);// 回弹效果
+        }
         tranX.start();
     }
 }
