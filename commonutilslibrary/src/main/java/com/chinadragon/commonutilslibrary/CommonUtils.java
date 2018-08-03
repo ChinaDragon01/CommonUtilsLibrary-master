@@ -20,34 +20,38 @@ public class CommonUtils {
     public static Context sContext;
     public static String sCustomLogTag;
     public static boolean sLogModel;
+    public static String sDirectoryName;
 
     /**
      * @param context
      * @param logModel true 开发环境，打印日志；false 正式环境，不打印日志
      */
-    public static void init(Context context, boolean logModel) {
-        init(context,null,logModel,null);
+    public static void init(Context context, boolean logModel, String directoryName) {
+        init(context, null, logModel, null, directoryName);
     }
 
     /**
      * @param context
      * @param customLogTag 自定义日志Tag
      * @param logModel     true 开发环境，打印日志；false 正式环境，不打印日志
+     * @param directoryName
      */
-    public static void init(Context context, String customLogTag, boolean logModel) {
-        init(context,customLogTag,logModel,null);
+    public static void init(Context context, String customLogTag, boolean logModel, String directoryName) {
+        init(context, customLogTag, logModel, null, directoryName);
     }
 
     /**
      * @param context
-     * @param customLogTag 自定义日志Tag
-     * @param logModel     true 开发环境，打印日志；false 正式环境，不打印日志
+     * @param customLogTag          自定义日志Tag
+     * @param logModel              true 开发环境，打印日志；false 正式环境，不打印日志
      * @param sharedPreferencesName
+     * @param directoryName
      */
-    public static void init(Context context, String customLogTag, boolean logModel, String sharedPreferencesName) {
+    public static void init(Context context, String customLogTag, boolean logModel, String sharedPreferencesName, String directoryName) {
         sContext = context;
         sCustomLogTag = customLogTag;
         sLogModel = logModel;
+        sDirectoryName = directoryName;
         if (TextUtils.isEmpty(sharedPreferencesName)) {
             SharedPreferencesUtil.getSharedPreferences("sharedPreferencesFile");
         } else {
