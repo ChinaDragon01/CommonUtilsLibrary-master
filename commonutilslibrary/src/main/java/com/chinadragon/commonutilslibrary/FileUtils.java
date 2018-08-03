@@ -34,7 +34,7 @@ public class FileUtils {
     public static final String PDF_POSTFIX = ".pdf";
     public static final String POSTFIX = ".jpg";
     public static final String IMG_NAME = "DCIM";
-    public static final String DIRECTORY_NAME = "commonutils";
+    public static final String DIRECTORY_NAME = CommonUtils.sDirectoryName == null ? "commonutils" : CommonUtils.sDirectoryName;
     public static String SAVE_DIRECTORY_PATh = DIRECTORY_NAME + File.separator;
     public static final String[] FOLDER_NAME = {"imges", "videos", "pdf"};
     public static final String[] FOLDER_ZH_NAME = {"图片", "视频", "文档"};
@@ -51,8 +51,13 @@ public class FileUtils {
         String state = Environment.getExternalStorageState();
         File rootDir = state.equals(Environment.MEDIA_MOUNTED) ? Environment.getExternalStoragePublicDirectory(
                 Environment.DIRECTORY_PICTURES) : context.getExternalFilesDir(Environment.DIRECTORY_PICTURES);
+        File folderDir = null;
+        if (parentPath != null) {
+            folderDir = new File(parentPath);
+        } else {
+            folderDir = new File(rootDir.getAbsolutePath());
+        }
 
-        File folderDir = new File(rootDir.getAbsolutePath());
         if (!folderDir.exists() && folderDir.mkdirs()) {
 
         }
