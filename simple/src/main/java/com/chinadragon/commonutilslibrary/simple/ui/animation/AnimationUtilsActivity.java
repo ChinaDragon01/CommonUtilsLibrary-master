@@ -95,9 +95,9 @@ public class AnimationUtilsActivity extends BaseAppCompatActivity {
                     break;
                 case R.id.imgBtn_topRight:
                     if (isHide3) {
-                        AnimationUtils.objectAnimatorTranX(mTvAlphaScale, ScreenUtil.getScreenHeight(), 0f, new BounceInterpolator(), 1000);
+                        AnimationUtils.objectAnimatorTranX(mTvAlphaScale, ScreenUtil.getScreenWidth(), 0f, new BounceInterpolator(), 1000);
                     } else {
-                        AnimationUtils.objectAnimatorTranX(mTvAlphaScale, 0f, ScreenUtil.getScreenHeight(), null, 1000);
+                        AnimationUtils.objectAnimatorTranX(mTvAlphaScale, 0f, ScreenUtil.getScreenWidth(), null, 1000);
                     }
                     isHide3 = !isHide3;
                     break;
