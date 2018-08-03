@@ -5,6 +5,7 @@ import android.app.Application;
 import com.chinadragon.commonutilslibrary.CommonUtils;
 import com.chinadragon.commonutilslibrary.simple.constants.AppConstants;
 
+
 /**
  * **********************************************************************
  * Author: zhangbenlong
@@ -19,6 +20,8 @@ public class app extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        CommonUtils.init(this, AppConstants.LOG_TAG,AppConstants.LOG_MODEL);
+        CommonUtils.init(this, AppConstants.LOG_TAG, AppConstants.LOG_MODEL,null,"FileUtils_DirectoryName");
+//        CommonUtils.init(this, AppConstants.LOG_TAG, AppConstants.LOG_MODEL,null,null);
+//        CommonUtils.init(this, AppConstants.LOG_TAG, AppConstants.LOG_MODEL,null);
     }
 }

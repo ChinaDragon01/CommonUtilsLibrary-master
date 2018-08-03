@@ -41,6 +41,7 @@ public class FileUtilsActivity extends BaseAppCompatActivity {
     @Override
     public void initData() {
         super.initData();
+        logInfo(" FileUtils.DIRECTORY_NAME = "+ FileUtils.DIRECTORY_NAME);
         String path = Environment.getExternalStorageDirectory().getAbsolutePath() + File.separator + FileUtils.DIRECTORY_NAME;
         String[] fileTypes = new String[1];
         List<File> fileList = FileUtils.getFileListByDirPath(path, fileTypes);
