@@ -1,5 +1,6 @@
-# CommonUtilsLibrary [Download](https://github.com/ChinaDragon01/CommonUtilsLibrary-master.git)
+# CommonUtilsLibrary [Download V1.0.1](https://github.com/ChinaDragon01/CommonUtilsLibrary-master.git) 
 开发过程中经常用到的类整理为工具类库
+
 ## 运行后的效果图:
 ### 动态操作效果图：[动态效果图](https://github.com/ChinaDragon01/CommonUtilsLibrary-master/blob/master/gif/commonutilslibrary.gif)
 ![gif](gif/commonutilslibrary.gif)
@@ -21,12 +22,12 @@
 
 ### 2.1 module目录的build.gradle添加依赖（as 3.1.x版本之后的依赖方式）
 	dependencies {
-	        implementation 'com.github.ChinaDragon01:CommonUtilsLibrary-master:1.0'
+	        implementation 'com.github.ChinaDragon01:CommonUtilsLibrary-master:1.0.1'
 	}
 
 ### 2.2 module目录的build.gradle添加依赖（as3.1.x版本之前的依赖方式）
 	dependencies {
-	        compile 'com.github.ChinaDragon01:CommonUtilsLibrary-master:1.0'
+	        compile 'com.github.ChinaDragon01:CommonUtilsLibrary-master:1.0.1'
 	}
 
 ### 3. 添加权限
