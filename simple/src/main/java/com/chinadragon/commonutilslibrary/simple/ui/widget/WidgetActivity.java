@@ -38,7 +38,7 @@ public class WidgetActivity extends BaseAppCompatActivity {
     @Override
     public void initView(Bundle savedInstanceState) {
         super.initView(savedInstanceState);
-        etCustomclearedittext.setShakeAnimation();// 开启晃动动画
+        etCustomclearedittext.setShakeAnimation();// 开启晃动动画，这个可以在判断CustomClearEditText的内容为空的时候再调用
     }
 
     @Override
