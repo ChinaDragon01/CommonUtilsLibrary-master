@@ -1,7 +1,11 @@
-# CommonUtilsLibrary [Download V1.0.1](https://github.com/ChinaDragon01/CommonUtilsLibrary-master.git) 
+# CommonUtilsLibrary[![](https://jitpack.io/v/ChinaDragon01/CommonUtilsLibrary-master.svg)](https://jitpack.io/#ChinaDragon01/CommonUtilsLibrary-master)
+
+## [Download V1.0.1](https://github.com/ChinaDragon01/CommonUtilsLibrary-master.git)
+ 
 开发过程中经常用到的类整理为工具类库
 
-## 运行后的效果图:
+## 运行后的效果图
+
 ### 动态操作效果图：[动态效果图](https://github.com/ChinaDragon01/CommonUtilsLibrary-master/blob/master/gif/commonutilslibrary.gif)
 ![gif](gif/commonutilslibrary.gif)
  
