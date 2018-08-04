@@ -1,4 +1,4 @@
-# CommonUtilsLibrary[![](https://jitpack.io/v/ChinaDragon01/CommonUtilsLibrary-master.svg)](https://jitpack.io/#ChinaDragon01/CommonUtilsLibrary-master)
+# CommonUtilsLibrary [![](https://jitpack.io/v/ChinaDragon01/CommonUtilsLibrary-master.svg)](https://jitpack.io/#ChinaDragon01/CommonUtilsLibrary-master)
 
 ## [Download V1.0.1](https://github.com/ChinaDragon01/CommonUtilsLibrary-master.git)
  
