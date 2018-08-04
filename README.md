@@ -29,7 +29,7 @@
 	        implementation 'com.github.ChinaDragon01:CommonUtilsLibrary-master:1.0.1'
 	}
 
-### 2.2 module目录的build.gradle添加依赖（as3.1.x版本之前的依赖方式）
+### 2.2 module目录的build.gradle添加依赖（as 3.1.x版本之前的依赖方式）
 	dependencies {
 	        compile 'com.github.ChinaDragon01:CommonUtilsLibrary-master:1.0.1'
 	}
