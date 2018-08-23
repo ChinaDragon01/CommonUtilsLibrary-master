@@ -73,7 +73,7 @@ public class TimeCountActivity extends BaseAppCompatActivity {
             @Override
             public void onNoMultiClick(View view) {// 设定两秒内不能重复点击
                 clickNum[0]++;
-                String currentTime = TimeCount.currentTime();
+                String currentTime = TimeCount.currentTime(null);
                 showToastLong("第" + clickNum[0] + "点击，当前时间:" + currentTime);
 
             }
@@ -89,7 +89,8 @@ public class TimeCountActivity extends BaseAppCompatActivity {
         view.setOnClickListener(v -> {
             switch (type) {
                 case AppConstants.ONE:
-                    tvCurrettime.setText("获取当前时间为：" + TimeCount.currentTime());
+                    tvCurrettime.setText("获取当前时间为：" + TimeCount.currentTime(null));
+                    logInfo("TimeCount.currentTime() = "+TimeCount.currentTime("yyyy-MM-dd HH:mm:ss"));
                     break;
                 case AppConstants.TWO:
                     totalDuration();
