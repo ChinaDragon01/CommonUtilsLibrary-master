@@ -32,10 +32,10 @@ public class TimeCount {
 
     /**
      * 将updateTimerThread从线程队列移除
-     *
+     * <p>
      * 删除指定的Runnable对象，使线程对象停止运行。
      */
-    public static void removeCallbacks(){
+    public static void removeCallbacks() {
         customHandler.removeCallbacks(updateTimerThread);
     }
 
@@ -82,9 +82,20 @@ public class TimeCount {
 
     }
 
-    public static String currentTime() {
+    /**
+     * 设置日期格式
+     *
+     * @param pattern
+     * @return
+     */
+    public static String currentTime(String pattern) {
         long time = System.currentTimeMillis();
-        SimpleDateFormat format = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss");
+        SimpleDateFormat format = null;
+        if (pattern != null) {
+            format = new SimpleDateFormat(pattern);
+        } else {
+            format = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss");
+        }
         String tempTime = format.format(new Date(time));
         return tempTime;
     }
