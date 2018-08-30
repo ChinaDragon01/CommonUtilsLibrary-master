@@ -232,7 +232,8 @@ public class FileUtils {
             tmpFile = new File(dir, getFileName(fileName, fileType, tempNum));
             boolean exists = tmpFile.exists();
             while (exists){
-                String strNum = name.substring(name.length() - 5, name.length() - 4);
+                String name2 = tmpFile.getName();
+                String strNum = name2.substring(name2.length() - 5, name2.length() - 4);
                 int temNum2 = Integer.valueOf(strNum) + 1;
                 tmpFile = new File(dir, getFileName(fileName, fileType, temNum2));
                 exists = tmpFile.exists();
