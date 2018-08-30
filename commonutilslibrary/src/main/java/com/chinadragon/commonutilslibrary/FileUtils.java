@@ -224,7 +224,7 @@ public class FileUtils {
             String name = tmpFile.getName();
             String substring = name.substring(name.length() - 5, name.length() - 4);
             int tempNum = -1;
-            if (RegexUtil.checkName(substring)) {
+            if (RegexUtil.checkName(substring) || !RegexUtil.checkNumber(substring)) {
                 tempNum = 1;
             } else {
                 tempNum = Integer.valueOf(substring) + 1;
