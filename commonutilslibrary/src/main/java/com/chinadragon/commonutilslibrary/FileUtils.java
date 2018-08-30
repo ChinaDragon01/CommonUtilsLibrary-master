@@ -230,11 +230,18 @@ public class FileUtils {
                 tempNum = Integer.valueOf(substring) + 1;
             }
             tmpFile = new File(dir, getFileName(fileName, fileType, tempNum));
-            if (tmpFile.exists()) {
+            boolean exists = tmpFile.exists();
+            while (exists){
                 String strNum = name.substring(name.length() - 5, name.length() - 4);
                 int temNum2 = Integer.valueOf(strNum) + 1;
                 tmpFile = new File(dir, getFileName(fileName, fileType, temNum2));
+                exists = tmpFile.exists();
             }
+           /* if (tmpFile.exists()) {
+                String strNum = name.substring(name.length() - 5, name.length() - 4);
+                int temNum2 = Integer.valueOf(strNum) + 1;
+                tmpFile = new File(dir, getFileName(fileName, fileType, temNum2));
+            }*/
         }
         return tmpFile;
     }
