@@ -36,12 +36,19 @@ public class FileUtilsActivity extends BaseAppCompatActivity {
         FileUtils.createFile(0);
         FileUtils.createFile(1);
         FileUtils.createFile(2);
+        // 下面是对 文件重复存在演示，具体的需要有真实的文件存在
+       /* File file1 = FileUtils.createFile("测试文件是否重复", 0, true);
+        File file2 =  FileUtils.createFile("测试文件是否重复",0,true);
+        File file3 =  FileUtils.createFile("测试文件是否重复",0,true);
+        logInfo("file1.getName()："+file1.getName());
+        logInfo("file2.getName()"+file2.getName());
+        logInfo("file3.getName()"+file3.getName());*/
     }
 
     @Override
     public void initData() {
         super.initData();
-        logInfo(" FileUtils.DIRECTORY_NAME = "+ FileUtils.DIRECTORY_NAME);
+        logInfo(" FileUtils.DIRECTORY_NAME = " + FileUtils.DIRECTORY_NAME);
         String path = Environment.getExternalStorageDirectory().getAbsolutePath() + File.separator + FileUtils.DIRECTORY_NAME;
         String[] fileTypes = new String[1];
         List<File> fileList = FileUtils.getFileListByDirPath(path, fileTypes);
