@@ -168,6 +168,19 @@ public class FileUtils {
         return getFile(fileType, fileId);
     }
 
+
+    /**
+     * 创建文件名
+     *
+     * @param fileName
+     * @param fileType      0：图片；1：视频；2：PDF文件
+     * @param allowRepeated true 表示允许文件名重复；false 表示不允许
+     * @return
+     */
+    public static File createFile(String fileName, int fileType, boolean allowRepeated) {
+        return getFile(fileName, fileType, allowRepeated);
+    }
+
     @NonNull
     private static File getFile(int fileType, String fileId) {
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.CHINA).format(new Date());
@@ -189,6 +202,48 @@ public class FileUtils {
         }
         File tmpFile = new File(dir, fileName);
         return tmpFile;
+    }
+
+    /**
+     * @param fileName
+     * @param fileType      0：图片；1：视频；2：PDF文件
+     * @param allowRepeated 是否允许文件名重复，后面累加1
+     * @return
+     */
+    private static File getFile(String fileName, int fileType, boolean allowRepeated) {
+        File dir = null;
+        try {
+            dir = makeDirs(FileUtils.SAVE_DIRECTORY_PATh + FileUtils.FOLDER_NAME[fileType]);
+        } catch (ArrayIndexOutOfBoundsException e) {
+            e.printStackTrace();
+            LogUtil.i("FileUtils 创建文件目录出现异常：" + e.toString());
+        }
+
+        File tmpFile = new File(dir, getFileName(fileName, fileType, 0));
+        if (allowRepeated && tmpFile.exists()) {
+            String name = tmpFile.getName();
+            String substring = name.substring(name.length() - 5, name.length() - 4);
+            int tempNum = -1;
+            if (RegexUtil.checkName(substring)) {
+                tempNum = 1;
+            } else {
+                tempNum = Integer.valueOf(substring) + 1;
+            }
+            tmpFile = new File(dir, getFileName(fileName, fileType, tempNum));
+        }
+        return tmpFile;
+    }
+
+    private static String getFileName(String fileName, int fileType, int num) {
+        String tempFileName = null;
+        if (0 == fileType) {
+            tempFileName = num == 0 ? fileName + IMG_POSTFIX : fileName + num + IMG_POSTFIX;
+        } else if (1 == fileType) {
+            tempFileName = num == 0 ? fileName + VIDEO_POSTFIX : fileName + num + VIDEO_POSTFIX;
+        } else if (2 == fileType) {
+            tempFileName = num == 0 ? fileName + PDF_POSTFIX : fileName + num + PDF_POSTFIX;
+        }
+        return tempFileName;
     }
 
     /**
