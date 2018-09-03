@@ -53,7 +53,7 @@ public class TimeCountActivity extends BaseAppCompatActivity {
     public void initView(Bundle savedInstanceState) {
         super.initView(savedInstanceState);
         startTime = SystemClock.uptimeMillis();
-        logInfo("startTime = "+startTime);
+        logInfo("startTime = " + startTime);
     }
 
     @Override
@@ -90,7 +90,7 @@ public class TimeCountActivity extends BaseAppCompatActivity {
             switch (type) {
                 case AppConstants.ONE:
                     tvCurrettime.setText("获取当前时间为：" + TimeCount.currentTime(null));
-                    logInfo("TimeCount.currentTime() = "+TimeCount.currentTime("yyyy-MM-dd HH:mm:ss"));
+                    logInfo("TimeCount.currentTime() = " + TimeCount.currentTime("yyyy-MM-dd HH:mm:ss"));
                     break;
                 case AppConstants.TWO:
                     totalDuration();
@@ -99,7 +99,8 @@ public class TimeCountActivity extends BaseAppCompatActivity {
                     recordtime();
                     break;
                 case AppConstants.FOUR:
-                    new TimeCountDown(60000, 1000, tvGetverfiycode).start();
+                    new TimeCountDown(60000, 1000, tvGetverfiycode, null).start();
+//                    new TimeCountDown(60000, 1000, tvGetverfiycode, "秒").start();
                     break;
                 case AppConstants.FIVE:
                     showToastShort("3秒钟后将有提示信息");
@@ -113,7 +114,7 @@ public class TimeCountActivity extends BaseAppCompatActivity {
 
     private void totalDuration() {
         long stopUptimeMillis = SystemClock.uptimeMillis();
-        logInfo("stopUptimeMillis = "+stopUptimeMillis);
+        logInfo("stopUptimeMillis = " + stopUptimeMillis);
         String totalDuration = TimeCount.timeData(stopUptimeMillis - startTime);// 记录总时间
         tvTotalDuration.setText("刷新停留的时长：" + totalDuration);
     }
