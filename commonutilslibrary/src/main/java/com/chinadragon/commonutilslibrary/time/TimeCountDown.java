@@ -17,15 +17,23 @@ import com.chinadragon.commonutilslibrary.R;
  */
 public class TimeCountDown extends CountDownTimer {
     private TextView mTextView;
-    public TimeCountDown(long millisInFuture, long countDownInterval, TextView textView) {
+    private String mText;
+
+    public TimeCountDown(long millisInFuture, long countDownInterval, TextView textView, String text) {
         super(millisInFuture, countDownInterval);
         this.mTextView = textView;
+        this.mText = text;
     }
 
     @Override
     public void onTick(long millisUntilFinished) {
         mTextView.setEnabled(false);
-        mTextView.setText(millisUntilFinished /1000+"秒后重新获取");
+        if (mText == null) {
+            mTextView.setText(millisUntilFinished / 1000 + "秒后重新获取");
+        } else {
+            mTextView.setText(millisUntilFinished / 1000 + mText);
+        }
+
     }
 
     @Override
