@@ -82,6 +82,15 @@ public class TimeCount {
 
     }
 
+    public static String timeData(long time, String pattern) {
+        if (null == pattern) {
+            return timeData(time);
+        } else {
+            SimpleDateFormat dateFormat = new SimpleDateFormat(pattern);
+            return dateFormat.format(new Date(time));
+        }
+    }
+
     /**
      * 设置日期格式
      *
