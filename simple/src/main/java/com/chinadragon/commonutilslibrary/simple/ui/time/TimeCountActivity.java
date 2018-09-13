@@ -91,6 +91,9 @@ public class TimeCountActivity extends BaseAppCompatActivity {
                 case AppConstants.ONE:
                     tvCurrettime.setText("获取当前时间为：" + TimeCount.currentTime(null));
                     logInfo("TimeCount.currentTime() = " + TimeCount.currentTime("yyyy-MM-dd HH:mm:ss"));
+                    logInfo("TimeCount.timeData() = " +   TimeCount.timeData(1536146841000L, "yyyy-MM-dd"));
+                    logInfo("TimeCount.timeData() = " +   TimeCount.timeData(1536146841000L, null));
+
                     break;
                 case AppConstants.TWO:
                     totalDuration();
