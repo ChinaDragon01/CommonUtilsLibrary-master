@@ -3,13 +3,19 @@ package com.chinadragon.commonutilslibrary;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.Dialog;
+import android.content.Context;
+import android.content.res.Resources;
 import android.graphics.Point;
 import android.util.DisplayMetrics;
+import android.util.Log;
+import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+
+import java.lang.reflect.Method;
 
 /**
  * **********************************************************************
@@ -67,6 +73,13 @@ public class ScreenUtil {
     }
 
     /**
+     * 得到设备屏幕的密度
+     */
+    public static final float getScreenScaledDensity() {
+        return CommonUtils.sContext.getResources().getDisplayMetrics().scaledDensity;
+    }
+
+    /**
      * 得到设备屏幕的密度Dpi
      */
     public static final int getScreenDensityDpi() {
@@ -106,6 +119,28 @@ public class ScreenUtil {
     public static final int dipToPx(float dpValue) {
         float scale = getScreenDensity();//scale是DisplayMetrics类中属性density
         return (int) (dpValue * scale + 0.5);
+    }
+
+    /**
+     * 将px值转换为sp值
+     *
+     * @param pxValue
+     * @return
+     */
+    public static int px2sp(float pxValue) {
+        final float fontScale = getScreenScaledDensity();
+        return (int) (pxValue / fontScale + 0.5f);
+    }
+
+    /**
+     * 将sp值转换为px值
+     *
+     * @param spValue
+     * @return
+     */
+    public static int sp2px(float spValue) {
+        final float fontScale = getScreenScaledDensity();
+        return (int) (spValue * fontScale + 0.5f);
     }
 
     /**
@@ -242,5 +277,93 @@ public class ScreenUtil {
     public static final ViewGroup.LayoutParams getViewGroupParams(float width, float height) {
         return new ViewGroup.LayoutParams((int) ((getScreenWidth() * width) + 0.5), (int) ((getScreenHeight() * height) + 0.5));
     }
+
+    /**
+     * 得到控件测量之后的高度
+     *
+     * @param view
+     * @return
+     */
+    public static int getMeasuredHeight(View view) {
+
+        int width = View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED);
+        int height = View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED);
+
+//        view.measure(View.MeasureSpec.UNSPECIFIED, View.MeasureSpec.UNSPECIFIED);
+        view.measure(width, height);
+        return view.getMeasuredHeight();
+    }
+
+    /**
+     * 得到控件测量之后的宽度
+     *
+     * @param view
+     * @return
+     */
+    public static int getMeasuredWidth(View view) {
+
+        view.measure(View.MeasureSpec.UNSPECIFIED, View.MeasureSpec.UNSPECIFIED);
+        return view.getMeasuredWidth();
+    }
+
+    /**
+     * 获取顶部statusbar的高度
+     *
+     * @return
+     */
+    public static int getStatusBarHeight(Context context) {
+        Resources resources = context.getResources();
+        int resourceId = resources.getIdentifier("status_bar_height", "dimen", "android");
+        int height = resources.getDimensionPixelSize(resourceId);
+        return height;
+    }
+
+    /**
+     * (底部导航栏)
+     * 获取底部navigationbar的高度
+     *
+     * @param context
+     * @return
+     */
+    public static int getNavigationBarHeight(Context context) {
+        int navigationBarHeight = 0;
+        Resources rs = context.getResources();
+        int id = rs.getIdentifier("navigation_bar_height", "dimen", "android");
+        if (id > 0 && checkDeviceHasNavigationBar(context)) {
+            navigationBarHeight = rs.getDimensionPixelSize(id);
+        }
+        return navigationBarHeight;
+    }
+
+    /**
+     * 检查是否有navigationbar显示
+     *
+     * @param context
+     * @return
+     */
+    public static boolean checkDeviceHasNavigationBar(Context context) {
+        boolean hasNavigationBar = false;
+        Resources rs = context.getResources();
+        int id = rs.getIdentifier("config_showNavigationBar", "bool", "android");
+        if (id > 0) {
+            hasNavigationBar = rs.getBoolean(id);
+        }
+        try {
+            Class systemPropertiesClass = Class.forName("android.os.SystemProperties");
+            Method m = systemPropertiesClass.getMethod("get", String.class);
+            String navBarOverride = (String) m.invoke(systemPropertiesClass, "qemu.hw.mainkeys");
+            if ("1".equals(navBarOverride)) {
+                hasNavigationBar = false;
+            } else if ("0".equals(navBarOverride)) {
+                hasNavigationBar = true;
+            }
+        } catch (Exception e) {
+            LogUtil.e("get navigation bar height failed! >> 获取 navigationbar  高度出现异常： "+e.toString());
+            e.printStackTrace();
+        }
+
+        return hasNavigationBar;
+    }
+
 
 }
